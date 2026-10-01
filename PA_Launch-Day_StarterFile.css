@@ -1,0 +1,161 @@
+/*
+    Author: Leah Pittman
+    Date: October 1, 2026
+    Purpose: Style Ground Standby Mode and Uplink Mode.
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Ground Standby Mode uses charcoal and cool colors. */
+body {
+    --background: #20252c;
+    --panel: #29323d;
+    --text: #dce9f5;
+    --accent: #91c9ed;
+    --border: #526a80;
+
+    background: var(--background);
+    color: var(--text);
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    transition: background 0.5s ease, color 0.5s ease;
+}
+
+/* Uplink Mode uses a dark background and warm colors. */
+body.uplink-mode {
+    --background: #201914;
+    --panel: #33271e;
+    --text: #fff0da;
+    --accent: #ffba66;
+    --border: #b77b40;
+}
+
+header,
+footer {
+    background: var(--panel);
+    padding: 1.5rem;
+    text-align: center;
+}
+
+header {
+    border-bottom: 2px solid var(--accent);
+}
+
+footer {
+    border-top: 2px solid var(--accent);
+}
+
+h1,
+h2,
+h3 {
+    color: var(--accent);
+}
+
+main {
+    max-width: 1000px;
+    margin: auto;
+    padding: 2rem;
+}
+
+section,
+aside {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+article {
+    margin-top: 1.5rem;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    list-style: none;
+    margin-top: 1rem;
+}
+
+nav a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+nav a:hover,
+nav a:focus {
+    text-decoration: underline;
+}
+
+#hero {
+    text-align: center;
+    padding: 4rem 2rem;
+    border: 2px solid var(--accent);
+}
+
+#heroTitle {
+    font-size: 3rem;
+}
+
+#heroText {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+}
+
+#connectionStatus {
+    color: var(--accent);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+button {
+    margin-top: 1rem;
+    padding: 1rem 1.5rem;
+    background: var(--accent);
+    color: var(--background);
+    border: none;
+    border-radius: 8px;
+    font: inherit;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    transform: translateY(-2px);
+}
+
+button:focus-visible,
+nav a:focus-visible {
+    outline: 3px solid var(--text);
+    outline-offset: 4px;
+}
+
+#cookieStatus {
+    margin-top: 1.5rem;
+    font-style: italic;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    #heroTitle {
+        font-size: 2rem;
+    }
+
+    main {
+        padding: 1rem;
+    }
+
+    section,
+    aside {
+        padding: 1.5rem;
+    }
+}
