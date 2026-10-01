@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--
+        Author: Leah Pittman
+        Date: October 1, 2026
+        Purpose: Display satellite uplink status and launch information.
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Satellite Uplink Command Center</title>
+
+    <link rel="stylesheet" href="PA_Launch-Day_StarterFile.css">
+    <script src="PA_Launch-Day_StarterFile.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Satellite Uplink Command Center</h1>
+
+        <nav aria-label="Primary">
+            <ul>
+                <li><a href="#hero">Command</a></li>
+                <li><a href="#systems">Systems</a></li>
+                <li><a href="#mission">Mission</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero" aria-live="polite">
+            <h2 id="heroTitle">GROUND STANDBY</h2>
+            <p id="heroText">Awaiting Uplink Authorization...</p>
+        </section>
+
+        <section>
+            <h2>Connection Status</h2>
+
+            <article>
+                <h3>Signal Status</h3>
+                <p id="connectionStatus">Offline</p>
+            </article>
+
+            <article>
+                <h3>Previous Launch</h3>
+                <p id="lastOnline">No uplink records found.</p>
+            </article>
+        </section>
+
+        <section id="systems">
+            <h2>Satellite Systems</h2>
+
+            <article>
+                <h3>Signal Refresh</h3>
+                <p>Request updated telemetry from the command network.</p>
+                <button id="refreshButton" type="button">
+                    Refresh Telemetry
+                </button>
+            </article>
+
+            <article>
+                <h3>Local Host Name</h3>
+                <p id="hostInfo"></p>
+            </article>
+
+            <article>
+                <h3>Current Communication Port</h3>
+                <p id="portInfo"></p>
+            </article>
+
+            <article>
+                <h3>Current Transmission Protocol</h3>
+                <p id="protocolInfo"></p>
+            </article>
+
+            <article>
+                <h3>Last Time Launched</h3>
+                <p id="launchInfo"></p>
+            </article>
+
+            <p id="cookieStatus"></p>
+        </section>
+
+        <aside id="mission">
+            <h2>Mission Brief</h2>
+            <p>
+                Launch this command center through a local web server
+                to activate Uplink Mode. Open the HTML directly to
+                display Ground Standby Mode.
+            </p>
+        </aside>
+    </main>
+
+    <footer>
+        <p>
+            Satellite Relay Network • Training Environment 2026
+            for Agent leapit6717
+        </p>
+    </footer>
+</body>
+</html>
